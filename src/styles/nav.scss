@@ -1,0 +1,40 @@
+
+.nav {
+    width: 100%;
+    padding: 25px 73px;
+
+    .nav-grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding: 10px 20px;
+            background: #eae4e4;
+            text-decoration: none;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: .550 ease-in;
+
+            .dash-i {
+                font-size: 1rem;
+                margin-right: 8px;
+                transition: .500s ease-in-out;
+            }
+
+            &:hover .dash-i {
+                margin-right: 3px;
+            }
+
+            &:hover {
+                background: #e0d7d7;
+                scale: 0.98;
+            }
+        }
+    }
+}

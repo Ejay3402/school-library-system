@@ -1,0 +1,117 @@
+
+.dash {
+    padding: 20px 75px;
+    background: #f4f1f1;
+
+    h1 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        color: #222;
+        margin-bottom: 13px;
+        font-size: 1.1rem;
+    }
+
+    .search-box {
+      margin: 11px auto;
+
+      .results-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+      }
+
+      p {
+        text-align: center;
+        font-size: clamp(0.85rem, 0.77rem + 0.4vw, 1.44rem);
+        color: #222;
+        font-weight: 550;
+        margin: 10px auto;
+      }
+
+      .book-card {
+        background: #ffffff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid #ddd;
+        transition: 0.2s ease-in-out;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+
+        &:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+        }
+
+        h4 {
+          margin: 0 0 0.5rem 0;
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+
+        p {
+          margin: 0 0 0.8rem 0;
+          color: #444;
+          font-size: 0.95rem;
+        }
+
+        .status {
+          display: inline-block;
+          padding: 0.35rem 0.7rem;
+          border-radius: 8px;
+          font-size: 0.85rem;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+
+        .available {
+          background: #e2ffe5;
+          color: #0a8d2c;
+          border: 1px solid #8aff9c;
+        }
+
+        .borrowed {
+          background: #ffe0e0;
+          color: #cc0000;
+          border: 1px solid #ff8b8b;
+        }
+      }
+    }
+
+    h3 {
+      font-size: clamp(1.55rem, 1.407rem + 0.717vw, 2.75rem);
+      color: #222;
+      font-weight: 550;
+      margin: 10px auto;
+    }
+    .Statistics-grid {
+        margin-top: 11px;
+        width: 100%;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+
+        .Statistics-box {
+            padding: 20px;
+            border-radius: 11px;
+            background: #fff;
+            text-align: center;
+            margin-bottom: 10px;
+
+            h3 {
+              font-size: clamp(1.55rem, 1.407rem + 0.717vw, 2.75rem);
+              color: gray;
+              font-weight: 550;
+              margin: 10px auto;
+            }
+            h4 {
+              font-size: clamp(0.85rem, 0.77rem + 0.4vw, 1.44rem);
+              color: #222;
+              font-weight: 550;
+              margin: 10px auto;
+            }
+        }
+    }
+}

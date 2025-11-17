@@ -1,0 +1,95 @@
+.books-page {
+  padding: 2rem 3rem;
+  background: #f7f7f8;
+  min-height: 100vh;
+
+  .page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.3rem;
+  }
+
+  .page-sub {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.8rem;
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .book-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+
+    h4 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 0.8rem 0;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .available {
+      background: #e2ffe5;
+      color: #0a8d2c;
+      border: 1px solid #8aff9c;
+    }
+
+    .borrowed {
+      background: #ffe0e0;
+      color: #cc0000;
+      border: 1px solid #ff8b8b;
+    }
+  }
+
+  .error-box {
+    background: #ffe5e5;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    border-left: 4px solid #ff4b4b;
+    color: #a80000;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-align: left;
+  }
+
+  .no-result-text {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #666;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem 0;
+    font-weight: 700;
+  }
+}
