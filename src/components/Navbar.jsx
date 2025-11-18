@@ -11,9 +11,9 @@ const Navbar = () => {
   return (
     <div className='nav'>
       <div className="nav-grid">
-            <Link to='/'><button> <MdDashboard className='dash-i'/> Dashboard</button></Link>
-            <Link to='/books'><button><BiBook className='dash-i'/> Books</button></Link>
-            <Link to='/reservation'><button><SiHoppscotch className='dash-i'/> Reservation</button></Link>
+            <Link to='/'><button className='btn1'> <MdDashboard className='dash-i'/> Dashboard</button></Link>
+            <Link to='/books'><button className='btn2'><BiBook className='dash-i'/> Books</button></Link>
+            <Link to='/reservation'><button className='btn3'><SiHoppscotch className='dash-i'/> Reservation</button></Link>
       </div>
     </div>
   )

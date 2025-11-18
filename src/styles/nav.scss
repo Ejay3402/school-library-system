@@ -3,17 +3,29 @@
     width: 100%;
     padding: 25px 73px;
 
+    @media (max-width: 878px) {
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 20px 18px;
+    }
+
     .nav-grid {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-flow: wrap row;
+
 
         button {
             display: flex;
+            margin: 10px;
+            width: 100%;
             align-items: center;
             list-style: none;
             padding: 10px 20px;
-            background: #eae4e4;
+            background: rgb(170, 170, 192);
             text-decoration: none;
             color: #000;
             border: none;
