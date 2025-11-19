@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Dashboard from './Dashboard';
 import Books from './Books';
 import Reservation from './Reservation';
+import Student from './Student';
 
 
 
@@ -17,6 +18,7 @@ const BookApp = ( { onLogOut } ) => {
             <Routes>
                 <Route path='/' element={<Dashboard />}/>
                 <Route path='/books' element={<Books />}/>
+                <Route path='/student' element={<Student />}/>
                 <Route path='/reservation' element={<Reservation />}/>
             </Routes>
         </Router>

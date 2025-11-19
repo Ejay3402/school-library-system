@@ -87,6 +87,154 @@
       }
     }
 
+     /* Desktop header row */
+  .table-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 0;
+      align-items: center;
+      background: #fff;
+      padding: 1rem 1.2rem;
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 12px;
+
+      @media (max-width: 820px) {
+        display: none;
+      }
+    }
+
+    .books-list {
+      background: #fff;
+      border-radius: 10px;
+      border: 1px solid #e3e3e3;
+      overflow: visible;
+
+      .book-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
+        align-items: center;
+        gap: 0;
+        padding: 1rem 1.2rem;
+        border-bottom: 1px solid #eee;
+        background: #fff;
+        min-height: 64px;
+
+         &:last-child {
+          border-bottom: none;
+        }
+
+        &:hover {
+          background: #f5f1f1;
+        }
+
+        /* MOBILE layout: left = title+author, right = status */
+        @media (max-width: 820px) {
+          display: grid;
+          grid-template-columns: 1fr auto; /* left column for title+author, right for status */
+          align-items: center;
+          gap: 12px;
+          padding: 0.85rem 1rem;
+          border-radius: 8px;
+          margin: 0 0 12px 0;
+          border: 1px solid #e8e8e8;
+          min-height: auto;
+        }
+        .col {
+    &.col-title {
+      /* title + mobile author stacked vertically */
+      .book-title {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #222;
+        line-height: 1.25;
+      }
+
+      .book-author {
+        margin: 6px 0 0 0;
+        color: #555;
+        font-size: 0.92rem;
+        font-weight: 500;
+      }
+
+      .mobile-author {
+        display: none;
+      }
+
+      @media (max-width: 820px) {
+        .mobile-author {
+          display: block; /* show author under title on mobile */
+        }
+      }
+    }
+
+    &.col-author {
+      .desktop-author {
+        margin: 0;
+        color: #555;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 820px) {
+        display: none; /* hide middle column on mobile (author is shown under title) */
+      }
+    }
+
+    &.col-status {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .status {
+        padding: 0.45rem 1rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        min-width: 82px;
+        text-align: center;
+      }
+
+      @media (max-width: 820px) {
+        /* keep status on the far right on mobile */
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  /* Status variants */
+  .available {
+    background: #1e6fd6;
+    color: #e0f4ff;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border-color: #a8d6ff;
+  }
+
+  .borrowed {
+    background: #f3f3f3;
+    color: #6b6b6b;
+    border-color: #dedede;
+  }
+
+  /* very small screens tweak */
+  @media (max-width: 420px) {
+    .col-status .status {
+      min-width: 70px;
+      padding: 0.35rem 0.8rem;
+      font-size: 0.8rem;
+    }
+  }
+
+  
+      }
+    }
+
     h3 {
       font-size: clamp(1.55rem, 1.407rem + 0.717vw, 2.75rem);
       color: #222;
@@ -123,3 +271,9 @@
         }
     }
 }
+
+.pp {
+    color: rgb(37, 4, 4);
+    margin: 15px auto;
+    text-align: center;
+  }

@@ -149,10 +149,6 @@ dueStatus: "Overdue",
 status: "Borrowed"
 },
 {
-dueStatus: "Active",
-status: "Borrowed"
-},
-{
 id: 26,
 title: "Foundations of General Science",
 author: "Eliza Grant",
@@ -327,5 +323,3 @@ status: "Available"
 ]
 
 export default books;
-
-
