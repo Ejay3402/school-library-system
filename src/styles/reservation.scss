@@ -1,0 +1,124 @@
+.reservation-page {
+  padding: 2rem 3rem;
+  background: #f7f7f8;
+  min-height: 100vh;
+
+  @media (max-width: 820px) {
+    padding: 16px;
+  }
+
+  .reservation-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+  }
+
+  .reservation-table-header {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1fr 0.7fr;
+    background: #fff;
+    padding: 1rem 1.2rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #777;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+
+    @media (max-width: 820px) {
+      display: none;
+    }
+  }
+
+  .reservation-list {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e3e3e3;
+    overflow: hidden;
+  }
+
+  .reservation-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1fr 0.7fr;
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: #fafafa;
+    }
+
+    /* MOBILE */
+    @media (max-width: 820px) {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "left status";
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #eee;
+      background: #fff;
+
+      .reservation-student,
+      .reservation-book,
+      .reservation-date {
+        grid-area: left;
+        margin-bottom: 4px;
+      }
+
+      .reservation-status {
+        grid-area: status;
+        justify-content: flex-end !important;
+      }
+    }
+  }
+
+  /* COLUMNS */
+  .reservation-col {
+    &.reservation-student .reservation-student-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #222;
+    }
+
+    &.reservation-book .reservation-book-title {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 2px 0;
+    }
+
+    &.reservation-date .reservation-due-date {
+      color: #666;
+      font-size: 0.92rem;
+    }
+
+    &.reservation-status {
+      display: flex;
+      justify-content: flex-end;
+
+      .reservation-status-badge {
+        padding: 0.45rem 1rem;
+        font-size: 0.85rem;
+        border-radius: 20px;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  /* STATUS COLORS */
+  .reservation-active {
+    background: #e0e9ff;
+    color: #1a4dd9;
+  }
+
+  .reservation-overdue {
+    background: #ffe5e5;
+    color: #d11a1a;
+  }
+}

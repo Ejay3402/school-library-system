@@ -74,17 +74,17 @@ const Dashboard = () => {
         <div className="Statistics-grid">
             
             <div className="Statistics-box"  data-aos="zoom-in">
-            <h3><span>152</span></h3>
+            <h3>52<span>+</span></h3>
             <h4>Total Books</h4>
         </div>
 
         <div className="Statistics-box" data-aos="zoom-in">
-            <h3><span>25</span></h3>
+            <h3>25<span>+</span></h3>
             <h4>Total Students</h4>
         </div>
 
         <div className="Statistics-box" data-aos="zoom-in">
-            <h3><span>10+</span></h3>
+            <h3>10<span>+</span></h3>
             <h4>Reservations</h4>
         </div>
 

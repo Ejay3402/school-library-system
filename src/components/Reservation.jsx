@@ -1,44 +1,60 @@
 import React from "react";
 import books from "../utils/books";
-import "../styles/boks.scss";
+import students from "../utils/students";
+import "./../styles/reservation.scss";
 
-const Books = () => {
+const Reservation = () => {
   return (
-    <div className="books-page">
-      <h1 className="page-title">Book Reservations</h1>
+    <div className="reservation-page">
+      <h1 className="reservation-title">Book Reservations</h1>
 
       {/* Desktop header */}
-      <div className="table-header">
-        <span className="head-title">Title</span>
-        <span className="head-author">Author</span>
-        <span className="head-status">Status</span>
+      <div className="reservation-table-header">
+        <span>Student</span>
+        <span>Book</span>
+        <span>Due Date</span>
+        <span>Status</span>
       </div>
 
-       <div className="books-list">
-        {books.map((book) => (
-          <div key={book.id} className="book-row">
+      <div className="reservation-list">
+        {books.map((book, index) => {
+          const student = students[index % students.length];
 
-            {/* LEFT: TITLE */}
-            <h4 className="book-title">{book.title}</h4>
+          return (
+            <div key={book.id} className="reservation-row">
 
-            {/* MIDDLE: AUTHOR */}
-            <p className="book-author">{book.author}</p>
+              {/* Student */}
+              <div className="reservation-col reservation-student">
+                <h4 className="reservation-student-name">{student.name}</h4>
+              </div>
 
-            {/* RIGHT: STATUS */}
-            <span
-              className={`status ${
-                book.dueStatus === "Active" ? "available" : "borrowed"
-              }`}
-            >
-              {book.dueStatus}
-            </span>
+              {/* Book */}
+              <div className="reservation-col reservation-book">
+                <p className="reservation-book-title">{book.title}</p>
+              </div>
 
-          </div>
-        ))}
+              {/* Due Date */}
+              <div className="reservation-col reservation-date">
+                <p className="reservation-due-date">{book.dueDate || "2025-01-20"}</p>
+              </div>
+
+              {/* Status */}
+              <div className="reservation-col reservation-status">
+                <span
+                  className={`reservation-status-badge ${
+                    book.dueStatus === "Active" ? "reservation-active" : "reservation-overdue"
+                  }`}
+                >
+                  {book.dueStatus}
+                </span>
+              </div>
+
+            </div>
+          );
+        })}
       </div>
-     
     </div>
   );
 };
 
-export default Books;
+export default Reservation;

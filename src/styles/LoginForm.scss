@@ -39,22 +39,22 @@
       color: #fff;
       border-radius: 50%;
       margin: 16px auto;
-      background: #3254eb;
+      background: #034508 ;
     }
-
+    
     h2 {
       font-size: clamp(1rem, 2vw, 1.4rem);
       font-weight: 600;
       color: #222;
       margin-bottom: clamp(1rem, 2vw, 1.4rem);
     }
-
+    
     form {
       display: flex;
       flex-direction: column;
       gap: clamp(0.7rem, 1.5vw, 1rem);
       text-align: left;
-
+      
       label {
         font-size: clamp(0.75rem, 1vw, 0.9rem);
         color: #444;
@@ -70,13 +70,13 @@
         font-size: clamp(0.8rem, 1vw, 1rem);
         outline: none;
         transition: 0.2s ease;
-
+        
         &:focus {
-          border-color: #4a90e2;
+          border-color: #033507;
           box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
         }
       }
-
+      
       .err {
         background: rgba(255, 71, 71, 0.1);
         padding: 0.6rem;
@@ -88,10 +88,10 @@
         gap: 0.3rem;
         border: 1px solid rgba(255, 71, 71, 0.2);
       }
-
+      
       button {
-        background: #3254eb;
         color: #fff;
+        background: #033507 ;
         border: none;
         padding: clamp(0.6rem, 1.2vw, 0.8rem);
         font-size: clamp(0.85rem, 1.2vw, 1rem);
@@ -106,7 +106,8 @@
         gap: 0.3rem;
 
         &:hover {
-          background: #3878c4;
+          background: #022605;
+          letter-spacing: .1em;
           transform: translateY(-1px);
         }
 

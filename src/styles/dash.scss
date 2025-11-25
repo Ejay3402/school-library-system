@@ -74,15 +74,13 @@
         }
 
         .available {
-          background: #e2ffe5;
-          color: #0a8d2c;
-          border: 1px solid #8aff9c;
+          background: #e0e9ff;
+          color: #1a4dd9;
         }
 
         .borrowed {
-          background: #ffe0e0;
-          color: #cc0000;
-          border: 1px solid #ff8b8b;
+          background: #ffe5e5;
+          color: #d11a1a;
         }
       }
     }
@@ -209,19 +207,14 @@
 
   /* Status variants */
   .available {
-    background: #1e6fd6;
-    color: #e0f4ff;
-    padding: 5px 10px;
-    border-radius: 50px;
-    border-color: #a8d6ff;
+    background: #e0e9ff;
+    color: #1a4dd9;
   }
 
   .borrowed {
-    background: #f3f3f3;
-    color: #6b6b6b;
-    border-color: #dedede;
+    background: #ffe5e5;
+    color: #d11a1a;
   }
-
   /* very small screens tweak */
   @media (max-width: 420px) {
     .col-status .status {
@@ -277,3 +270,11 @@
     margin: 15px auto;
     text-align: center;
   }
+
+  .status {
+    padding: 0.45rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+}

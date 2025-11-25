@@ -65,7 +65,7 @@
     }
 
     /* MOBILE layout: left = title+author, right = status */
-    @media (max-width: 820px) {
+    @media (max-width: 620px) {
       display: grid;
       grid-template-columns: 1fr auto; /* left column for title+author, right for status */
       align-items: center;
@@ -102,7 +102,7 @@
         display: none;
       }
 
-      @media (max-width: 820px) {
+      @media (max-width: 620px) {
         .mobile-author {
           display: block; /* show author under title on mobile */
         }
@@ -116,7 +116,7 @@
         font-size: 0.95rem;
       }
 
-      @media (max-width: 820px) {
+      @media (max-width: 620px) {
         display: none; /* hide middle column on mobile (author is shown under title) */
       }
     }
@@ -126,19 +126,8 @@
       justify-content: flex-end;
       align-items: center;
 
-      .status {
-        padding: 0.45rem 1rem;
-        border-radius: 20px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        text-transform: capitalize;
-        border: 1px solid transparent;
-        white-space: nowrap;
-        min-width: 82px;
-        text-align: center;
-      }
 
-      @media (max-width: 820px) {
+      @media (max-width: 620px) {
         /* keep status on the far right on mobile */
         justify-content: flex-end;
       }
@@ -147,17 +136,13 @@
 
   /* Status variants */
   .available {
-    background: #1e6fd6;
-    color: #e0f4ff;
-    padding: 5px 10px;
-    border-radius: 50px;
-    border-color: #a8d6ff;
+    background: #e0e9ff;
+    color: #1a4dd9;
   }
 
   .borrowed {
-    background: #f3f3f3;
-    color: #6b6b6b;
-    border-color: #dedede;
+    background: #ffe5e5;
+    color: #d11a1a;
   }
 
   /* very small screens tweak */
@@ -168,4 +153,12 @@
       font-size: 0.8rem;
     }
   }
+}
+
+.status {
+    padding: 0.45rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    font-weight: 600;
+    white-space: nowrap;
 }
